@@ -1,0 +1,244 @@
+/* Font-Family */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cookie&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+    /* Colors */
+    --primary-color: #8b31ef;
+    --black-color: #1f1f1f;
+    --blue-color: #1a2fda;
+    --white-color: rgb(249, 248, 248);
+    --grey-color: rgb(103, 103, 103);
+    --transparent-grey-color: rgba(255, 255, 255, 0.367);
+
+    /* Typography */
+    --logo-text: "Cookie", cursive;
+    --font-heading: "Bebas Neue", sans-serif;
+    --font-text: "Plus Jakarta Sans", sans-serif;
+
+    /* Spacing */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+    --space-7: 3rem;
+    --space-8: 4rem;
+    --space-9: 8rem;
+    --space-10: 12rem;
+
+    /* Layout */
+    --max-container: 1800px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+.container {
+    max-width: var(--max-container);
+    margin: 0 auto;
+}
+
+
+/* ======================
+          Header
+====================== */
+
+.header {
+    background-color: var(--black-color);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-5) var(--space-7) var(--space-5) var(--space-7);
+}
+
+.nav a {
+    text-decoration: none;
+    list-style: none;
+    color: var(--white-color);
+    font-family: var(--font-text);
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.ul-links {
+    display: flex;
+}
+
+.ul-links a {
+    padding: var(--space-3);
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.logo-box img {
+    height: 40px;
+    padding: var(--space-2);
+    background-color: var(--white-color);
+    border-radius: var(--space-8);
+    border: 3px solid rgb(137, 136, 136);
+}
+
+.logo-box h3 {
+    font-family: var(--logo-text);
+    font-size: 1.6rem;
+}
+
+.social-media-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-5);
+}
+
+.social-btn {
+    display: flex;
+    gap: var(--space-1);
+}
+
+.social-btn a {
+    padding: var(--space-1);
+    transition: transform 0.3s ease;
+}
+
+.social-btn a:hover {
+    transform: translateY(-3px) scale(1.1);
+}
+
+.social-btn i {
+    padding: var(--space-2);
+    background-color: var(--white-color);
+    border-radius: var(--space-6);
+    color: var(--black-color);
+}
+
+.social-media-btn .hire-me {
+    padding: var(--space-2);
+    background-color: var(--white-color);
+    border-radius: var(--space-2);
+    color: var(--black-color);
+    transition: transform 0.3s ease;
+}
+
+.hire-me:hover {
+    transform: translateY(-2px) scale(1.1);
+    background-color: var(--blue-color);
+    color: var(--white-color);
+}
+
+
+/* ======================
+          hero
+====================== */
+
+.hero-content {
+    padding: var(--space-9) var(--space-8) var(--space-9) var(--space-8);
+}
+
+.hero-content h3 {
+    font-family: var(--font-text);
+    font-size: 1.7rem;
+}
+
+.hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 8rem;
+    line-height: 1.1;
+}
+
+.hero-content span {
+    color: var(--grey-color);
+}
+
+.hero-content p {
+    font-family: var(--font-text);
+    font-size: 1.5rem;
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+.view-btn {
+    padding: var(--space-3);
+    border-radius: var(--space-2);
+    font-family: var(--font-text);
+    font-size: 1.2rem;
+    margin-top: var(--space-7);
+    border: none;
+    transition: transform 0.6s ease;
+}
+
+.view-btn h4 {
+    display: flex;
+    align-items: center;
+}
+
+.view-btn i {
+    margin-left: var(--space-2);
+    font-size: var(--space-5);
+}
+
+.view-btn:hover {
+    transform: translateY(-4px) scale(1.1);
+}
+
+/* ======================
+        project
+====================== */
+
+.project-content {}
+
+.project-heading {
+    margin: var(--space-7);
+    height: 20vh;
+    border-top: 1px solid var(--transparent-grey-color);
+    position: relative;
+}
+
+.page-no-content {
+    width: 100%;
+    position: absolute;
+    top: -25px;
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-text);
+    color: var(--transparent-grey-color);
+}
+
+.project-heading .project-title {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    padding: var(--space-9) var(--space-9) var(--space-3) var(--space-4);
+}
+
+.two-part {
+    display: flex;
+}
+
+.tilt-text {
+    position: relative;
+    margin-top: var(--space-10);
+}
+
+.tilt-text h2 {
+    display: inline-block;
+    transform: rotate(270deg);
+    font-family: var(--font-heading);
+    font-size: 8rem;
+
+}
