@@ -10,7 +10,7 @@
     --blue-color: #1a2fda;
     --white-color: rgb(249, 248, 248);
     --grey-color: rgb(103, 103, 103);
-    --transparent-grey-color: rgba(255, 255, 255, 0.367);
+    --transparent-grey-color: rgba(255, 255, 255, 0.269);
 
     /* Typography */
     --logo-text: "Cookie", cursive;
@@ -30,7 +30,7 @@
     --space-10: 12rem;
 
     /* Layout */
-    --max-container: 1800px;
+    --max-container: 1840px;
 }
 
 * {
@@ -47,6 +47,7 @@ body {
 .container {
     max-width: var(--max-container);
     margin: 0 auto;
+    height: 100%;
 }
 
 
@@ -62,7 +63,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--space-5) var(--space-7) var(--space-5) var(--space-7);
+    padding: var(--space-4) var(--space-7) var(--space-5) var(--space-7);
 }
 
 .nav a {
@@ -71,7 +72,7 @@ body {
     color: var(--white-color);
     font-family: var(--font-text);
     font-weight: 800;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .ul-links {
@@ -79,17 +80,17 @@ body {
 }
 
 .ul-links a {
-    padding: var(--space-3);
+    padding: var(--space-6);
 }
 
 .logo-box {
     display: flex;
     align-items: center;
-    gap: var(--space-2);
+    gap: var(--space-3);
 }
 
 .logo-box img {
-    height: 40px;
+    height: 50px;
     padding: var(--space-2);
     background-color: var(--white-color);
     border-radius: var(--space-8);
@@ -98,22 +99,21 @@ body {
 
 .logo-box h3 {
     font-family: var(--logo-text);
-    font-size: 1.6rem;
+    font-size: 2.5rem;
 }
 
 .social-media-btn {
     display: flex;
     align-items: center;
-    gap: var(--space-5);
+    gap: var(--space-6);
 }
 
 .social-btn {
     display: flex;
-    gap: var(--space-1);
 }
 
 .social-btn a {
-    padding: var(--space-1);
+    padding: var(--space-5);
     transition: transform 0.3s ease;
 }
 
@@ -122,14 +122,14 @@ body {
 }
 
 .social-btn i {
-    padding: var(--space-2);
+    padding: var(--space-4);
     background-color: var(--white-color);
     border-radius: var(--space-6);
     color: var(--black-color);
 }
 
 .social-media-btn .hire-me {
-    padding: var(--space-2);
+    padding: var(--space-4);
     background-color: var(--white-color);
     border-radius: var(--space-2);
     color: var(--black-color);
@@ -142,24 +142,23 @@ body {
     color: var(--white-color);
 }
 
-
 /* ======================
           hero
 ====================== */
-
 .hero-content {
-    padding: var(--space-9) var(--space-8) var(--space-9) var(--space-8);
+    padding: var(--space-8) var(--space-8) var(--space-9) var(--space-8);
 }
 
 .hero-content h3 {
     font-family: var(--font-text);
-    font-size: 1.7rem;
+    font-size: 1.9rem;
 }
 
 .hero-content h1 {
     font-family: var(--font-heading);
-    font-size: 8rem;
+    font-size: 10rem;
     line-height: 1.1;
+    padding-top: var(--space-3);
 }
 
 .hero-content span {
@@ -168,16 +167,17 @@ body {
 
 .hero-content p {
     font-family: var(--font-text);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     max-width: 600px;
     line-height: 1.5;
+    padding-top: var(--space-3);
 }
 
 .view-btn {
-    padding: var(--space-3);
-    border-radius: var(--space-2);
+    padding: var(--space-5);
+    border-radius: var(--space-3);
     font-family: var(--font-text);
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     margin-top: var(--space-7);
     border: none;
     transition: transform 0.6s ease;
@@ -190,7 +190,7 @@ body {
 
 .view-btn i {
     margin-left: var(--space-2);
-    font-size: var(--space-5);
+    font-size: 2rem;
 }
 
 .view-btn:hover {
@@ -201,13 +201,11 @@ body {
         project
 ====================== */
 
-.project-content {}
-
-.project-heading {
+.project-container {
     margin: var(--space-7);
-    height: 20vh;
     border-top: 1px solid var(--transparent-grey-color);
     position: relative;
+    height: 100%;
 }
 
 .page-no-content {
@@ -220,25 +218,201 @@ body {
     color: var(--transparent-grey-color);
 }
 
-.project-heading .project-title {
-    font-family: var(--font-heading);
-    font-size: 4rem;
-    padding: var(--space-9) var(--space-9) var(--space-3) var(--space-4);
-}
-
-.two-part {
+.project-content {
+    height: 100%;
     display: flex;
 }
 
-.tilt-text {
-    position: relative;
-    margin-top: var(--space-10);
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 800px;
 }
 
-.tilt-text h2 {
-    display: inline-block;
+.section-heading h2 {
+    font-size: 11rem;
     transform: rotate(270deg);
     font-family: var(--font-heading);
-    font-size: 8rem;
+    padding-right: var(--space-9);
+    color: var(--transparent-grey-color);
+}
+
+.main-project {
+    width: 100%;
+    height: 100%;
+}
+
+.project-title {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    padding: var(--space-10) var(--space-4) var(--space-3) var(--space-9);
+}
+
+.project-title h2 {
+    font-size: 5rem;
+    line-height: 1;
+}
+
+.project-title span {
+    color: var(--grey-color);
+}
+
+.project-cards {
+    overflow: hidden;
+    background-color: var(--blue-color);
+    height: 34rem;
+    border-radius: 2rem;
+    margin: var(--space-6) var(--space-4) var(--space-3) var(--space-9);
+}
+
+.project-details {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.project-description {
+    padding: var(--space-8);
+    width: 60%;
+}
+
+.project-description h2 {
+    font-size: 5rem;
+    font-family: var(--font-text);
+    margin-bottom: var(--space-5);
+}
+
+.project-description h3 {
+    font-size: 4rem;
+    font-family: var(--font-text);
+    margin-left: var(--space-7);
+}
+
+.project-description p {
+    font-size: 2rem;
+    font-family: var(--font-text);
+    margin-left: var(--space-7);
 
 }
+
+.project-image {
+    width: 40%;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+/* ======================
+        About
+====================== */
+
+
+.about-container {
+    margin: var(--space-7);
+    border-top: 1px solid var(--transparent-grey-color);
+    position: relative;
+    height: 100%;
+}
+
+.about-content {
+    display: flex;
+    height: 100%;
+    gap: var(--space-2);
+}
+
+.aboutme-content {
+    margin: var(--space-7);
+    min-height: 100%;
+    width: 100%;
+}
+
+.about-me-details {
+    padding: var(--space-10) var(--space-10) var(--space-5) var(--space-10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-7);
+    height: 100%;
+}
+
+.about-img {
+    height: 400px;
+    width: 300px;
+}
+
+.about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+.my-details {
+    width: 800px;
+    padding: 0 var(--space-8) var(--space-3) var(--space-8);
+}
+
+.my-details h2 {
+    font-size: 7rem;
+    font-family: var(--font-heading);
+
+}
+
+.my-details h2 span {
+    color: var(--grey-color);
+}
+
+.my-details p {
+    font-size: 1.8rem;
+    font-family: var(--font-text);
+    font-weight: 500;
+    margin-top: var(--space-5);
+}
+
+.download-cv-btn {
+    margin-top: var(--space-7);
+    background-color: var(--grey-color);
+    width: 230px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    padding: var(--space-2);
+}
+
+.download {
+    padding: 15px;
+    border-radius: 40px;
+    border: none;
+    font-size: 1.3rem;
+    font-family: var(--font-text);
+    font-weight: 500;
+}
+
+.arrow-btn i {
+    font-size: 2rem;
+    padding: 10px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    border-radius: 50%;
+}
+
+
+/* ======================
+        skill
+====================== */
+
+.skill-container {
+    margin: var(--space-7);
+    border-top: 1px solid var(--transparent-grey-color);
+    position: relative;
+    height: 100%;
+}
+
