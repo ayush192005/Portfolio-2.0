@@ -42,6 +42,7 @@
 body {
     background-color: var(--black-color);
     color: var(--white-color);
+    font-family: var(--font-text);
 }
 
 .container {
@@ -364,7 +365,7 @@ body {
 }
 
 .about-me-details {
-    padding: var(--space-10) var(--space-10) var(--space-5) var(--space-10);
+    padding: var(--space-9) var(--space-10) var(--space-5) var(--space-9);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -449,8 +450,6 @@ body {
         skill
 ====================== */
 
-.skill {}
-
 .skill-container {
     margin: var(--space-7);
     border-top: 1px solid var(--transparent-grey-color);
@@ -462,25 +461,69 @@ body {
 .skill-content {
     display: flex;
     justify-content: center;
-    padding: var(--space-10) var(--space-10) var(--space-10) var(--space-6);
+    flex-direction: column;
+    padding: var(--space-9) var(--space-10) var(--space-6) var(--space-8);
 }
 
 .skill-headings {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
 }
 
-.skill-headings p {
-    font-size: 2rem;
+.skill-mini-heading {
+    font-size: 1.8rem;
+    text-decoration: underline;
+}
+
+.skill-headings h2{
     font-family: var(--font-heading);
-
+    font-size: 6rem;
 }
 
+.my-skills {
+    font-family: var(--font-text);
+    font-size: 1.7rem;
+}
+
+.skill-logos{
+        margin-top: var(--space-4);
+}
+
+.skill-rows{
+    display: flex;
+    justify-content:space-around;
+    padding: var(--space-8) var(--space-8) var(--space-8) var(--space-9);
+}
+
+.skill-boxes{
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.462);
+    display: flex;
+    justify-content: center;
+    align-items: center     ;
+}
+
+.skill-boxes i{
+    font-size: 3.6rem;
+}
+
+.skill-boxes svg{
+    font-size: 5rem;
+}
+
+.row2{
+    padding-top: 0;
+}
 /* ======================
-        Educattion
+ Experience And Educattion
 ====================== */
 
-.education {
-    background-color: rgb(3, 35, 141);
+.education-experience {
+    height: 100vh;
 }
 
 /* ======================
