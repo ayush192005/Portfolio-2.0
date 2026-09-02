@@ -43,6 +43,7 @@ body {
     background-color: var(--black-color);
     color: var(--white-color);
     font-family: var(--font-text);
+    overflow-x: hidden;
 }
 
 .container {
@@ -157,19 +158,19 @@ body {
 ====================== */
 .hero-content {
     /* padding: var(--space-8) var(--space-8) var(--space-9) var(--space-8); */
-    padding-block: clamp(var(--space-1), 4vw, var(--space-9));
-    padding-inline: 4%;
+    padding-block: clamp(var(--space-2), 5vw, var(--space-9));
+    padding-inline: 3%;
 }
 
 .hero-content h3 {
     font-family: var(--font-text);
-    font-size: clamp(1.1rem, 4vw, 2.1rem);
+    font-size: clamp(1.1rem, 4vw, 2rem);
 }
 
 .hero-content h1 {
     font-family: var(--font-heading);
     font-size: clamp(3.7rem, 8vw, 10rem);
-    line-height: 1.1;
+    line-height: 1;
     padding-top: var(--space-3);
 }
 
@@ -224,7 +225,8 @@ body {
 ====================== */
 
 .project-container {
-    margin: var(--space-7);
+    padding-block: clamp(var(--space-2), 8vw, var(--space-9));
+    padding-inline: 5%;
     border-top: 1px solid var(--transparent-grey-color);
     position: relative;
     height: 100%;
@@ -234,10 +236,12 @@ body {
     width: 100%;
     position: absolute;
     top: -25px;
+    left: -3px;
     display: flex;
     justify-content: space-between;
     font-family: var(--font-text);
     color: var(--transparent-grey-color);
+    padding: 1.6rem;
 }
 
 .project-content {
@@ -249,12 +253,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 200px;
+    width: clamp(50px, 5vw, 150px);
     height: 800px;
 }
 
 .section-heading h2 {
-    font-size: 11rem;
+    font-size: clamp(4rem, 8vw, 11rem);
     transform: rotate(270deg);
     font-family: var(--font-heading);
     padding-right: var(--space-9);
@@ -264,7 +268,8 @@ body {
 .main-project {
     width: 100%;
     height: 100%;
-    padding: var(--space-10) var(--space-4) var(--space-3) var(--space-9);
+    padding-block: clamp(var(--space-3), 5vw, var(--space-6));
+    padding-inline: 7%;
 }
 
 .project-title {
@@ -273,7 +278,7 @@ body {
 }
 
 .project-title h2 {
-    font-size: 5rem;
+    font-size: clamp(1.3rem, 6vw, 5rem);
     line-height: 1;
 }
 
@@ -292,7 +297,7 @@ body {
 }
 
 .project-card-content h2 {
-    font-size: 7.3rem;
+    font-size: clamp(4rem,8vw,7.3rem);
     font-family: var(--font-heading);
     font-weight: 400;
 }
@@ -303,9 +308,9 @@ body {
 }
 
 .project-details p {
-    font-size: 1.1rem;
+    font-size: clamp(0.7rem,8vw,1.4rem);
     font-family: var(--font-text);
-    width: 500px;
+    width: clamp(500px, 3vw,800px);
 }
 
 .project-view-btn {
@@ -544,6 +549,106 @@ body {
 /* ======================
  Experience And Educattion
 ====================== */
+.educt-experince-content {
+    margin: var(--space-7);
+    border-top: 1px solid var(--transparent-grey-color);
+    position: relative;
+    height: 100%;
+    display: flex;
+}
+
+.educ-experience-details {
+    width: 100%;
+    height: 100%;
+    padding: var(--space-4) var(--space-7) var(--space-8) var(--space-5);
+}
+
+.educ-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--space-8);
+}
+
+.educ-heading h2 {
+    font-family: var(--font-heading);
+    font-size: 5rem;
+    width: fit-content;
+}
+
+.educ-heading span {
+    color: var(--grey-color);
+}
+
+.progress {
+    width: 100%;
+    margin-top: var(--space-8);
+    padding: var(--space-8);
+    font-family: var(--font-text);
+    display: flex;
+    gap: var(--space-5);
+    position: relative;
+    height: 700px;
+}
+
+.progress-part {
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    font-family: var(--font-text);
+    flex-direction: column;
+    padding: var(--space-7);
+}
+
+.educ-icons {
+    width: fit-content;
+}
+
+.educ-icons svg {
+    padding: 10px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    color: var(--black-color);
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d3d3d3;
+}
+
+.progress-part h4 {
+    font-size: 1.3rem;
+    margin-bottom: var(--space-5);
+    color: var(--white-color);
+}
+
+
+
+.progress-part h3 {
+    font-size: 2rem;
+    margin-bottom: var(--space-3);
+}
+
+
+.progress-part p {
+    font-size: 1.4rem;
+    color: var(--grey-color);
+
+}
+
+.certificates h5 {
+    font-size: 1.5rem;
+}
+
+.college,
+.inter,
+.certificate {
+    display: flex;
+    gap: 40px;
+}
+
 
 
 
