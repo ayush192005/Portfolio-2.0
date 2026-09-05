@@ -37,17 +37,18 @@
     padding: 0;
     box-sizing: border-box;
 }
-html{
-    scroll-behavior: smooth;
-}
 
-body {
+html {
+    scroll-behavior: smooth;
     background-color: var(--black-color);
     color: var(--white-color);
     font-family: var(--font-text);
-    overflow-x: hidden;
-    
 }
+
+body.open-nav {
+    overflow: hidden;
+}
+
 
 .container {
     max-width: var(--max-container);
@@ -134,21 +135,6 @@ body {
     color: var(--black-color);
 }
 
-.social-media-btn .hire-me {
-    padding: var(--space-4);
-    background-color: var(--white-color);
-    border-radius: var(--space-2);
-    color: var(--black-color);
-    transition: transform 0.6s ease;
-}
-
-.hire-me:hover {
-    transform: translateY(-2px) scale(1.05);
-    filter: drop-shadow(5px 5px 10px rgba(255, 255, 255, 0.373));
-    background-color: var(--blue-color);
-    color: var(--white-color);
-}
-
 /* ===========================
        Mobile Navigation
 =========================== */
@@ -165,8 +151,15 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow-x: hidden;
+    overflow-y: auto;
     transition: all 0.9s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-5);
 }
 
 .links {
@@ -191,11 +184,8 @@ body {
     font-size: clamp(3.5rem, 7vw, 5rem);
     font-family: var(--font-heading);
     font-weight: bold;
-}
-
-.close-icon {
-    display: flex;
-    justify-content: end;
+    display: block;
+    width: 100%;
 }
 
 .close-icon i {
@@ -214,6 +204,52 @@ body {
     transform: translate(0%);
 }
 
+.mobile-nav .contact-btn {
+    width: fit-content;
+}
+
+.contact-page {
+    width: 100%;
+    height: 100%;
+    background-color: var(--black-color);
+    /* transform: translateX(130%); */
+    position: fixed;
+    /* display: none; */
+    padding: 1rem;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    overflow-y: auto;
+    transition: all 0.9s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.left-section {
+    background-color: red;
+    height: 100%;
+    width: 100%;
+    padding: clamp(2rem, 4vw, 4rem);
+}
+
+.fill-section {
+    background-color: rgba(8, 136, 46, 0.519);
+    height: 100%;
+    width: 100%;
+     padding: clamp(2rem, 4vw, 4rem);
+}
+
+.contact-img{
+    background-color: antiquewhite;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.contact-detail{
+    background-color: antiquewhite;
+    width: 100%;
+    height: 100%;
+    
+}
 /* ======================
           hero
 ====================== */
@@ -253,7 +289,7 @@ body {
     padding: clamp(0.9rem, 2vw, 1.2rem);
     border-radius: var(--space-3);
     font-family: var(--font-text);
-    font-size: clamp(1rem, 2vw, 1.6rem);
+    font-size: clamp(1rem, 2vw, 1.4rem);
     margin-top: var(--space-5);
     border: none;
     font-weight: 800;
@@ -440,7 +476,8 @@ body {
 }
 
 .about-me-details {
-    padding: clamp(2rem, 5vw, 8rem);
+    padding-block: clamp(2rem, 5vw, 7rem);
+    padding-inline: 6%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -589,6 +626,7 @@ body {
 
 .skill-boxes:hover {
     transform: translateY(-2px) scale(1.1);
+    filter: drop-shadow(5px 5px 10px rgba(255, 255, 255, 0.432));
 }
 
 .skill-boxes i {
@@ -600,7 +638,7 @@ body {
 }
 
 .skill-boxes img {
-    width: clamp(2rem, 3vw, 5rem);
+    width: clamp(2rem, 5vw, 5rem);
 }
 
 .row2 {
@@ -784,7 +822,7 @@ body {
 }
 
 .footer-btns {
-    padding: clamp(0.7rem, 2vw, 1rem);
+    padding: clamp(1rem, 2vw, 1.4rem);
     font-size: clamp(1rem, 2vw, 1.3rem);
     font-family: var(--font-text);
     border-radius: 0.7rem;
@@ -807,12 +845,11 @@ body {
     background-color: var(--grey-color);
     color: var(--white-color);
     border: none;
-    padding: clamp(1rem, 2vw, 1.7rem);
+    padding: clamp(1rem, 2vw, 1.4rem);
     font-size: clamp(1rem, 2vw, 1.3rem);
 }
 
 .copy-right-part {
-    /* width: 100%; */
     display: flex;
     justify-content: space-between;
     margin: 5rem 0 1rem 0;
@@ -824,9 +861,8 @@ body {
 /* ==========================
           Media Query
 ========================== */
-/* Desktop */
-/* @media (max-width:1200px) {} */
 
+/* Desktop */
 @media (max-width:1024px) {
 
     /* Nav-section */
